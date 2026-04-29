@@ -1,0 +1,326 @@
+:root {
+    --primary: #10b981; /* Emerald Green */
+    --primary-glow: rgba(16, 185, 129, 0.3);
+    --secondary: #3b82f6; /* Blue */
+    --bg-dark: #0a0a0c;
+    --bg-card: rgba(255, 255, 255, 0.03);
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Background Blobs removed for cleaner aesthetic */
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+header {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+    background: rgba(10, 10, 12, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--text-main);
+}
+
+/* Hero Section */
+.hero {
+    padding: 8rem 0 4rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    min-height: 80vh;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1.2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Phone Mockup System */
+.phone-mockup {
+    position: relative;
+    width: 280px;
+    aspect-ratio: 9/19;
+    background: #000;
+    border-radius: 45px;
+    border: 12px solid #1a1a1a;
+    box-shadow: 0 50px 100px rgba(0,0,0,0.6), 
+                inset 0 0 15px rgba(255,255,255,0.05);
+    overflow: hidden;
+    z-index: 2;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    background: #1a1a1a;
+}
+
+/* Notch removed for better screenshot clarity */
+
+.phone-mockup img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.phone-mockup.secondary {
+    position: absolute;
+    transform: translate(120px, 40px) scale(0.9);
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.hero-image:hover .phone-mockup.primary {
+    transform: translate(-20px, -20px) rotate(-5deg);
+}
+
+.hero-image:hover .phone-mockup.secondary {
+    transform: translate(140px, 60px) scale(0.95) rotate(5deg);
+    opacity: 1;
+}
+
+/* Reflection Effect removed for clarity */
+
+.phone-mockup.reveal:hover {
+    transform: scale(0.9) translateY(-10px) !important;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+.hero-p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    border-radius: 100px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #0ea5e9; /* Slightly different shade on hover for feedback */
+    transform: translateY(-2px);
+}
+
+/* Features */
+.features {
+    padding: 8rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    padding: 2.5rem;
+    border-radius: 24px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    background: var(--primary-glow);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: var(--text-muted);
+}
+
+/* Feature Rows (Gallery) */
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 8rem;
+}
+
+.feature-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.feature-row-content {
+    flex: 1;
+}
+
+.feature-row-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.feature-row-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.feature-row-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Feature row background glow removed */
+
+/* CTA Section */
+.cta {
+    padding: 8rem 0;
+    text-align: center;
+}
+
+.cta-box {
+    background: var(--bg-card);
+    padding: 4rem;
+    border-radius: 24px;
+    border: 1px solid var(--glass-border);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 6rem;
+        gap: 2rem;
+    }
+    h1 { font-size: 2.8rem; }
+    .hero-p { margin: 0 auto 2.5rem; }
+    
+    .hero-image {
+        width: 100%;
+        padding: 0;
+        min-height: 500px;
+        margin-top: 2rem;
+    }
+
+    .phone-mockup {
+        width: 240px;
+    }
+
+    .feature-row, .feature-row:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .phone-mockup.secondary {
+        display: none; /* Simplify for mobile */
+    }
+
+    .hero-image:hover .phone-mockup.primary {
+        transform: scale(1.05);
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2.2rem; }
+    .hero-content { padding: 0 1rem; }
+    .phone-mockup { width: 220px; }
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
