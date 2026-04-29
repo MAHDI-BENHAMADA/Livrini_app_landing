@@ -1,3 +1,9 @@
+// App Configuration - Update this when you release a new version!
+const appConfig = {
+    apkFilename: 'livrini.apk', // Make sure this matches your file in the assets folder
+    version: 'v1.0.0'
+};
+
 // Translation Data
 const translations = {
     ar: {
@@ -36,8 +42,8 @@ const translations = {
         cta_title: "هل أنت جاهز للنمو؟",
         cta_desc: "انضم إلى مستقبل إدارة COD في الجزائر. قم بتحميل النسخة التجريبية الآن.",
         cta_btn: "تحميل APK (Beta)",
-        cta_sub: "مجاني للمستخدمين الأوائل • v1.0.0",
-        footer_copy: "&copy; 2026 COD Master DZ. جميع الحقوق محفوظة."
+        cta_sub: "مجاني للمستخدمين الأوائل • {{version}}",
+        footer_copy: "&copy; 2026 LIVRINI DZ. جميع الحقوق محفوظة."
     },
     en: {
         nav_download: "Download APK",
@@ -75,8 +81,8 @@ const translations = {
         cta_title: "Ready to Scale?",
         cta_desc: "Join the future of COD management in Algeria. Download the beta now.",
         cta_btn: "Download APK (Beta)",
-        cta_sub: "Free for early adopters • v1.0.0",
-        footer_copy: "&copy; 2026 COD Master DZ. All rights reserved."
+        cta_sub: "Free for early adopters • {{version}}",
+        footer_copy: "&copy; 2026 LIVRINI DZ. All rights reserved."
     }
 };
 
@@ -87,20 +93,31 @@ function updateContent() {
     document.querySelectorAll('[data-t]').forEach(el => {
         const key = el.getAttribute('data-t');
         if (langData[key]) {
-            el.innerHTML = langData[key];
+            let text = langData[key];
+            // Inject version dynamically
+            if (text.includes('{{version}}')) {
+                text = text.replace('{{version}}', appConfig.version);
+            }
+            el.innerHTML = text;
         }
     });
     
+    // Dynamically update download links
+    document.querySelectorAll('a[download]').forEach(btn => {
+        btn.href = `assets/${appConfig.apkFilename}`;
+        btn.setAttribute('download', appConfig.apkFilename);
+    });
+
     // Update body attributes
     document.body.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
     document.body.lang = currentLang;
-    
+
     // Update button text
     const langBtn = document.getElementById('langBtn');
     if (langBtn) {
         langBtn.innerText = currentLang === 'ar' ? 'EN' : 'العربية';
     }
-    
+
     // Save preference
     localStorage.setItem('lang', currentLang);
 }
@@ -138,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const target = document.querySelector(targetId);
             if (target) {
                 target.scrollIntoView({
