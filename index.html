@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COD Master | Easiest Order Management for Algeria</title>
-    <meta name="description" content="Manage your COD business in Algeria with ease. No config needed, direct Google Sheets sync, and high-speed order confirmation.">
+    <title>LIVRINI | Easiest Order Management for Algeria</title>
+    <meta name="description"
+        content="Manage your COD business in Algeria with ease. No config needed, direct Google Sheets sync, and high-speed order confirmation.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Cairo:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        [lang="ar"] { font-family: 'Cairo', sans-serif; }
+        [lang="ar"] {
+            font-family: 'Cairo', sans-serif;
+        }
+
         .lang-switch {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--glass-border);
             color: var(--text-main);
             padding: 0.4rem 0.8rem;
@@ -25,14 +32,16 @@
         }
     </style>
 </head>
+
 <body dir="rtl" lang="ar">
     <!-- Background Blobs removed for clearer visual hierarchy -->
     <div class="container">
         <header>
-            <div class="logo">COD Master</div>
+            <div class="logo">LIVRINI</div>
             <nav style="display: flex; align-items: center; gap: 1rem;">
                 <button class="lang-switch" onclick="toggleLanguage()" id="langBtn">EN</button>
-                <a href="#download" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;" data-t="nav_download">تحميل APK</a>
+                <a href="assets/livrini.apk" download="livrini.apk" class="btn btn-primary"
+                    style="padding: 0.6rem 1.5rem; font-size: 0.9rem;" data-t="nav_download">تحميل APK</a>
             </nav>
         </header>
 
@@ -40,13 +49,17 @@
             <div class="hero-content">
                 <div class="reveal">
                     <h1 data-t="hero_title">تتبع وتأكيد <span class="highlight">طلبات COD</span> في ثوانٍ.</h1>
-                    <p class="hero-p" data-t="hero_desc">أسرع طريقة لإدارة أعمال الدفع عند الاستلام في الجزائر. قم بمزامنة ملفات Google Sheets مباشرة وابدأ في تأكيد الطلبات اليوم.</p>
+                    <p class="hero-p" data-t="hero_desc">أسرع طريقة لإدارة أعمال الدفع عند الاستلام في الجزائر. قم
+                        بمزامنة ملفات Google Sheets مباشرة وابدأ في تأكيد الطلبات اليوم.</p>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a href="#download" class="btn btn-primary" style="padding: 1.2rem 2.5rem; font-size: 1.1rem;" data-t="hero_cta">
+                        <a href="assets/livrini.apk" download="livrini.apk" class="btn btn-primary"
+                            style="padding: 1.2rem 2.5rem; font-size: 1.1rem;" data-t="hero_cta">
                             <i data-lucide="download" style="margin-right: 10px;"></i> تحميل APK
                         </a>
-                        <div style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.9rem;">
-                            <i data-lucide="zap" style="width: 16px; color: var(--primary);"></i> <span data-t="hero_setup">الإعداد في دقيقتين</span>
+                        <div
+                            style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.9rem;">
+                            <i data-lucide="zap" style="width: 16px; color: var(--primary);"></i> <span
+                                data-t="hero_setup">الإعداد في دقيقتين</span>
                         </div>
                     </div>
                 </div>
@@ -62,22 +75,30 @@
         </section>
 
         <!-- Direct Action Section -->
-        <section class="reveal" style="padding: 4rem 0; background: rgba(255,255,255,0.02); border-radius: 24px; margin-bottom: 6rem; border: 1px solid var(--glass-border);">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 0 2rem;">
+        <section class="reveal"
+            style="padding: 4rem 0; background: rgba(255,255,255,0.02); border-radius: 24px; margin-bottom: 6rem; border: 1px solid var(--glass-border);">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 0 2rem;">
                 <div style="text-align: center;">
-                    <div style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">01</div>
+                    <div style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">01
+                    </div>
                     <h4 style="margin-bottom: 0.5rem;" data-t="step1_title">تحميل APK</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);" data-t="step1_desc">احصل على أحدث إصدار تجريبي مباشرة على هاتفك.</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);" data-t="step1_desc">احصل على أحدث إصدار
+                        تجريبي مباشرة على هاتفك.</p>
                 </div>
                 <div style="text-align: center;">
-                    <div style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">02</div>
+                    <div style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">02
+                    </div>
                     <h4 style="margin-bottom: 0.5rem;" data-t="step2_title">ربط الجداول</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);" data-t="step2_desc">قم بتوصيل جداول بيانات Google الحالية بنقرة واحدة.</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);" data-t="step2_desc">قم بتوصيل جداول بيانات
+                        Google Sheets الحالية بنقرة واحدة.</p>
                 </div>
                 <div style="text-align: center;">
-                    <div style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">03</div>
+                    <div style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 0.5rem;">03
+                    </div>
                     <h4 style="margin-bottom: 0.5rem;" data-t="step3_title">ابدأ التأكيد</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);" data-t="step3_desc">إدارة الموظفين والطلبات الخاصة بك على الفور.</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);" data-t="step3_desc">إدارة الموظفين والطلبات
+                        الخاصة بك على الفور.</p>
                 </div>
             </div>
         </section>
@@ -85,18 +106,21 @@
         <section id="features" class="features">
             <div class="section-title reveal">
                 <h2 data-t="features_title">بنيت للسرعة</h2>
-                <p style="color: var(--text-muted);" data-t="features_desc">كل ما تحتاجه لإدارة مخزونك وتدفق التسليم.</p>
+                <p style="color: var(--text-muted);" data-t="features_desc">كل ما تحتاجه لإدارة مخزونك وتدفق التسليم.
+                </p>
             </div>
             <div class="grid">
                 <div class="card reveal">
                     <div class="icon"><i data-lucide="file-spreadsheet"></i></div>
                     <h3 data-t="feat1_title">مزامنة الجداول</h3>
-                    <p data-t="feat1_desc">اربط جداول بيانات Google الخاصة بك على الفور. قم بعرض وتعديل وتحديث الحالات مباشرة من التطبيق.</p>
+                    <p data-t="feat1_desc">اربط جداول بيانات Google الخاصة بك على الفور. قم بعرض وتعديل وتحديث الحالات
+                        مباشرة من التطبيق.</p>
                 </div>
                 <div class="card reveal">
                     <div class="icon"><i data-lucide="zap"></i></div>
                     <h3 data-t="feat2_title">بدون إعدادات معقدة</h3>
-                    <p data-t="feat2_desc">توقف عن إضاعة الوقت في الإعداد. ما عليك سوى تسجيل الدخول وربط ورقتك والبدء في تأكيد الطلبات.</p>
+                    <p data-t="feat2_desc">توقف عن إضاعة الوقت في الإعداد. ما عليك سوى تسجيل الدخول وربط ورقتك والبدء في
+                        تأكيد الطلبات.</p>
                 </div>
                 <div class="card reveal">
                     <div class="icon"><i data-lucide="phone-call"></i></div>
@@ -113,10 +137,17 @@
             <div class="feature-row reveal">
                 <div class="feature-row-content">
                     <h3 data-t="row1_title">تسجيل دخول آمن وبسيط</h3>
-                    <p data-t="row1_desc">الوصول إلى لوحة القيادة الخاصة بك بشكل آمن. سواء كنت المالك أو عضواً في الفريق، قم بتسجيل الدخول عبر Google أو استخدم رمز دعوة مخصص.</p>
+                    <p data-t="row1_desc">الوصول إلى لوحة القيادة الخاصة بك بشكل آمن. سواء كنت المالك أو عضواً في
+                        الفريق، قم بتسجيل الدخول عبر Google أو استخدم رمز دعوة مخصص.</p>
                     <ul style="list-style: none; padding: 0; color: var(--text-muted);">
-                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check-circle-2" style="color: var(--primary); width: 18px; vertical-align: middle; margin-right: 8px;"></i> <span data-t="row1_li1">التحكم في الوصول حسب الأدوار</span></li>
-                        <li><i data-lucide="check-circle-2" style="color: var(--primary); width: 18px; vertical-align: middle; margin-right: 8px;"></i> <span data-t="row1_li2">مزامنة فورية لمساحة العمل</span></li>
+                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check-circle-2"
+                                style="color: var(--primary); width: 18px; vertical-align: middle; margin-right: 8px;"></i>
+                            <span data-t="row1_li1">التحكم في الوصول حسب الأدوار</span>
+                        </li>
+                        <li><i data-lucide="check-circle-2"
+                                style="color: var(--primary); width: 18px; vertical-align: middle; margin-right: 8px;"></i>
+                            <span data-t="row1_li2">مزامنة فورية لمساحة العمل</span>
+                        </li>
                     </ul>
                 </div>
                 <div class="feature-row-image">
@@ -129,10 +160,17 @@
             <div class="feature-row reveal">
                 <div class="feature-row-content">
                     <h3 data-t="row2_title">إدارة الموظفين بسهولة</h3>
-                    <p data-t="row2_desc">قم بدعوة المؤكدين ووكلاء التوصيل بنقرة واحدة. إدارة الأدوار، وإلغاء الوصول، وتتبع الأداء من مركز واحد.</p>
+                    <p data-t="row2_desc">قم بدعوة المؤكدين ووكلاء التوصيل بنقرة واحدة. إدارة الأدوار، وإلغاء الوصول،
+                        وتتبع الأداء من مركز واحد.</p>
                     <ul style="list-style: none; padding: 0; color: var(--text-muted);">
-                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check-circle-2" style="color: var(--primary); width: 18px; vertical-align: middle; margin-right: 8px;"></i> <span data-t="row2_li1">إنشاء رموز دعوة آمنة</span></li>
-                        <li><i data-lucide="check-circle-2" style="color: var(--primary); width: 18px; vertical-align: middle; margin-right: 8px;"></i> <span data-t="row2_li2">مراقبة الموظفين النشطين</span></li>
+                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check-circle-2"
+                                style="color: var(--primary); width: 18px; vertical-align: middle; margin-right: 8px;"></i>
+                            <span data-t="row2_li1">إنشاء رموز دعوة آمنة</span>
+                        </li>
+                        <li><i data-lucide="check-circle-2"
+                                style="color: var(--primary); width: 18px; vertical-align: middle; margin-right: 8px;"></i>
+                            <span data-t="row2_li2">مراقبة الموظفين النشطين</span>
+                        </li>
                     </ul>
                 </div>
                 <div class="feature-row-image">
@@ -144,7 +182,8 @@
         </section>
 
         <!-- Social Proof Section -->
-        <section class="reveal" style="padding: 4rem 0; text-align: center; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); margin: 4rem 0;">
+        <section class="reveal"
+            style="padding: 4rem 0; text-align: center; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); margin: 4rem 0;">
             <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; opacity: 0.7;">
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <i data-lucide="users" class="highlight"></i>
@@ -164,12 +203,15 @@
         <section id="download" class="cta">
             <div class="cta-box reveal">
                 <h2 data-t="cta_title">هل أنت جاهز للنمو؟</h2>
-                <p style="margin-bottom: 2rem; color: var(--text-muted);" data-t="cta_desc">انضم إلى مستقبل إدارة COD في الجزائر. قم بتحميل النسخة التجريبية الآن.</p>
+                <p style="margin-bottom: 2rem; color: var(--text-muted);" data-t="cta_desc">انضم إلى مستقبل إدارة COD في
+                    الجزائر. قم بتحميل النسخة التجريبية الآن.</p>
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                    <a href="#" class="btn btn-primary" style="padding: 1.2rem 3rem; font-size: 1.1rem; min-width: 250px;" data-t="cta_btn">
+                    <a href="assets/livrini.apk" download="livrini.apk" class="btn btn-primary"
+                        style="padding: 1.2rem 3rem; font-size: 1.1rem; min-width: 250px;" data-t="cta_btn">
                         <i data-lucide="download" style="margin-right: 10px;"></i> تحميل APK (Beta)
                     </a>
-                    <span style="font-size: 0.8rem; color: var(--text-muted);" data-t="cta_sub">مجاني للمستخدمين الأوائل • v1.0.0</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted);" data-t="cta_sub">مجاني للمستخدمين الأوائل
+                        • v1.0.0</span>
                 </div>
             </div>
         </section>
@@ -180,7 +222,8 @@
                 <i data-lucide="instagram"></i>
                 <i data-lucide="linkedin"></i>
             </div>
-            <p style="color: var(--text-muted); font-size: 0.9rem;" data-t="footer_copy">&copy; 2026 COD Master DZ. جميع الحقوق محفوظة.</p>
+            <p style="color: var(--text-muted); font-size: 0.9rem;" data-t="footer_copy">&copy; 2026 LIVRINI DZ. جميع
+                الحقوق محفوظة.</p>
         </footer>
     </div>
 
@@ -189,4 +232,5 @@
         lucide.createIcons();
     </script>
 </body>
+
 </html>
