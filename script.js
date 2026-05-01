@@ -1,6 +1,6 @@
 // App Configuration - Update this when you release a new version!
 const appConfig = {
-    apkFilename: 'livrini.apk', // Make sure this matches your file in the assets folder
+    apkUrl: 'https://github.com/MAHDI-BENHAMADA/order-management-app/releases/download/1.0.0/Livrini.apk', // Update this URL for new releases
     version: 'v1.0.0'
 };
 
@@ -103,9 +103,8 @@ function updateContent() {
     });
     
     // Dynamically update download links
-    document.querySelectorAll('a[download]').forEach(btn => {
-        btn.href = `assets/${appConfig.apkFilename}`;
-        btn.setAttribute('download', appConfig.apkFilename);
+    document.querySelectorAll('a[href*="github.com"]').forEach(btn => {
+        btn.href = appConfig.apkUrl;
     });
 
     // Update body attributes
