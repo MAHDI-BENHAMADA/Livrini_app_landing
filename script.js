@@ -1,7 +1,7 @@
 // App Configuration - Update this when you release a new version!
 const appConfig = {
-    apkUrl: 'https://github.com/MAHDI-BENHAMADA/order-management-app/releases/download/1.0.0/Livrini.apk', // Update this URL for new releases
-    version: 'v1.0.0'
+    apkUrl: 'https://github.com/MAHDI-BENHAMADA/order-management-app/releases/download/1.1.0/livrini_1.1.0.apk', // Update this URL for new releases
+    version: 'v1.1.0'
 };
 
 // Translation Data
