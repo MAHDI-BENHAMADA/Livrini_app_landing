@@ -1,16 +1,19 @@
 // App Configuration - Update this when you release a new version!
 const appConfig = {
-    apkUrl: 'https://github.com/MAHDI-BENHAMADA/order-management-app/releases/download/1.1.0/livrini_1.1.0.apk', // Update this URL for new releases
-    version: 'v1.1.0'
+    apkUrl: 'https://github.com/MAHDI-BENHAMADA/order-management-app/releases/download/1.2.0/Livrini._1.2.0.apk', // Update this URL for new releases
+    webUrl: 'https://livriniweb.vercel.app/',
+    version: 'v1.2.0'
 };
 
 // Translation Data
 const translations = {
     ar: {
         nav_download: "تحميل APK",
+        nav_web: "فتح النسخة الويب",
         hero_title: 'تتبع وتأكيد <span class="highlight">طلبات COD</span> في ثوانٍ.',
         hero_desc: "أسرع طريقة لإدارة أعمال الدفع عند الاستلام في الجزائر. قم بمزامنة ملفات Google Sheets مباشرة وابدأ في تأكيد الطلبات اليوم.",
         hero_cta: "تحميل APK",
+        hero_web_cta: "فتح على الويب",
         hero_setup: "الإعداد في دقيقتين",
         step1_title: "تحميل APK",
         step1_desc: "احصل على أحدث إصدار تجريبي مباشرة على هاتفك.",
@@ -42,14 +45,17 @@ const translations = {
         cta_title: "هل أنت جاهز للنمو؟",
         cta_desc: "انضم إلى مستقبل إدارة COD في الجزائر. قم بتحميل النسخة التجريبية الآن.",
         cta_btn: "تحميل APK (Beta)",
+        cta_web_btn: "فتح النسخة الويب",
         cta_sub: "مجاني للمستخدمين الأوائل • {{version}}",
         footer_copy: "&copy; 2026 LIVRINI DZ. جميع الحقوق محفوظة."
     },
     en: {
         nav_download: "Download APK",
+        nav_web: "Open Web Version",
         hero_title: 'Track & Confirm <span class="highlight">COD Orders</span> in Seconds.',
         hero_desc: "The fastest way to manage your Algerian COD business. Directly sync your Google Sheets and start confirming orders today.",
         hero_cta: "Download APK",
+        hero_web_cta: "Open on Web",
         hero_setup: "Setup in 2 minutes",
         step1_title: "Download APK",
         step1_desc: "Get the latest beta version directly to your phone.",
@@ -81,6 +87,7 @@ const translations = {
         cta_title: "Ready to Scale?",
         cta_desc: "Join the future of COD management in Algeria. Download the beta now.",
         cta_btn: "Download APK (Beta)",
+        cta_web_btn: "Open Web Version",
         cta_sub: "Free for early adopters • {{version}}",
         footer_copy: "&copy; 2026 LIVRINI DZ. All rights reserved."
     }
@@ -101,10 +108,15 @@ function updateContent() {
             el.innerHTML = text;
         }
     });
-    
+
     // Dynamically update download links
     document.querySelectorAll('a[href*="github.com"]').forEach(btn => {
         btn.href = appConfig.apkUrl;
+    });
+
+    // Dynamically update web app links
+    document.querySelectorAll('a[data-web-link]').forEach(btn => {
+        btn.href = appConfig.webUrl;
     });
 
     // Update body attributes
