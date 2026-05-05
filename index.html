@@ -38,12 +38,10 @@
     <div class="container">
         <header>
             <div class="logo">LIVRINI</div>
-            <nav style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+            <nav style="display: flex; align-items: center; gap: 0.75rem;">
                 <button class="lang-switch" onclick="toggleLanguage()" id="langBtn">EN</button>
-                <a href="https://livriniweb.vercel.app/" data-web-link class="btn btn-secondary"
-                    style="padding: 0.6rem 1.5rem; font-size: 0.9rem; background: rgba(99,102,241,0.12); border: 1px solid rgba(99,102,241,0.4); color: var(--text-main);" data-t="nav_web">فتح النسخة الويب</a>
-                <a href="https://github.com/MAHDI-BENHAMADA/order-management-app/releases/download/1.2.0/livrini_1.2.0.apk" class="btn btn-primary"
-                    style="padding: 0.6rem 1.5rem; font-size: 0.9rem;" data-t="nav_download">تحميل APK</a>
+                <a href="https://livriniweb.vercel.app/" data-web-link class="btn nav-btn-web" data-t="nav_web">فتح النسخة الويب</a>
+                <a href="https://github.com/MAHDI-BENHAMADA/order-management-app/releases/download/1.2.0/Livrini._1.2.0.apk" class="btn btn-primary nav-btn-apk" data-t="nav_download">تحميل APK</a>
             </nav>
         </header>
 
@@ -53,10 +51,16 @@
                     <h1 data-t="hero_title">تتبع وتأكيد <span class="highlight">طلبات COD</span> في ثوانٍ.</h1>
                     <p class="hero-p" data-t="hero_desc">أسرع طريقة لإدارة أعمال الدفع عند الاستلام في الجزائر. قم
                         بمزامنة ملفات Google Sheets مباشرة وابدأ في تأكيد الطلبات اليوم.</p>
-                    <div
-                        style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.9rem; margin-top: 1.5rem;">
-                        <i data-lucide="zap" style="width: 16px; color: var(--primary);"></i> <span
-                            data-t="hero_setup">الإعداد في دقيقتين</span>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                        <a href="https://github.com/MAHDI-BENHAMADA/order-management-app/releases/download/1.2.0/Livrini._1.2.0.apk" class="btn btn-primary"
+                            style="padding: 1.2rem 2.5rem; font-size: 1.1rem;" data-t="hero_cta">
+                            <i data-lucide="download" style="margin-right: 10px;"></i> تحميل APK
+                        </a>
+                        <div
+                            style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.9rem;">
+                            <i data-lucide="zap" style="width: 16px; color: var(--primary);"></i> <span
+                                data-t="hero_setup">الإعداد في دقيقتين</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -202,6 +206,10 @@
                 <p style="margin-bottom: 2rem; color: var(--text-muted);" data-t="cta_desc">انضم إلى مستقبل إدارة COD في
                     الجزائر. قم بتحميل النسخة التجريبية الآن.</p>
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                    <a href="https://github.com/MAHDI-BENHAMADA/order-management-app/releases/download/1.2.0/Livrini._1.2.0.apk" class="btn btn-primary"
+                        style="padding: 1.2rem 3rem; font-size: 1.1rem; min-width: 250px;" data-t="cta_btn">
+                        <i data-lucide="download" style="margin-right: 10px;"></i> تحميل APK (Beta)
+                    </a>
                     <span style="font-size: 0.8rem; color: var(--text-muted);" data-t="cta_sub">مجاني للمستخدمين الأوائل
                         • v1.2.0</span>
                 </div>
