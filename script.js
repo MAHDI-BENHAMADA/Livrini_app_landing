@@ -1,6 +1,6 @@
 // App Configuration - Update this when you release a new version!
 const appConfig = {
-    apkUrl: 'https://github.com/MAHDI-BENHAMADA/order-management-app/releases/download/1.2.0/Livrini._1.2.0.apk', // Update this URL for new releases
+    apkUrl: 'https://github.com/MAHDI-BENHAMADA/order-management-app/releases/download/1.2.0/Livrini_1.2.0.apk', // Update this URL for new releases
     webUrl: 'https://livriniweb.vercel.app/',
     version: 'v1.2.0'
 };
